@@ -1,0 +1,19 @@
+.header {
+  grid-area: header;
+  position: relative;
+  text-align: center;
+  background: rgba(73, 155, 234, 1);
+}
+
+.button {
+  background-color: #4b0082;
+  border: none;
+  color: white;
+  padding: 5px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 4px;
+  margin-left: 10px;
+}

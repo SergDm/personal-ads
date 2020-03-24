@@ -1,0 +1,6 @@
+.footer {
+  grid-area: footer;
+  position: relative;
+  text-align: center;
+  background: rgba(73, 155, 234, 1);
+}

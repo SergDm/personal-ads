@@ -1,0 +1,9 @@
+.app-wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navbar content"
+    "footer footer";
+  grid-template-rows: 80px 17fr 2fr;
+  grid-template-columns: 1fr 5fr;
+}
