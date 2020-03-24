@@ -2,3 +2,60 @@
   grid-area: content;
   text-align: center;
 }
+
+.productsWrapper {
+  margin: 10px;
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+}
+
+.productsWrapper img {
+  width: 400px;
+}
+
+.products {
+  display: grid;
+  grid-template-areas: "content href";
+  grid-template-columns: 14fr 1fr;
+  padding: 10px;
+  border: 2px rgba(73, 155, 234, 1) solid;
+  border-radius: 5px;
+  background: #bbbbbb;
+}
+
+.content {
+  grid-area: content;
+}
+
+.href {
+  padding-right: 8px;
+  grid-area: href;
+  writing-mode: tb-rl;
+  transform:rotate(180deg);
+  background-color: rgba(73, 155, 234, 1);
+}
+
+.productsWrapper a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.source {
+  background-color: rgba(73, 155, 234, 1);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content h3 {
+  text-decoration: underline;
+  padding: 0px 10px;
+}
+
+.content p {
+  padding: 0px 10px;
+}

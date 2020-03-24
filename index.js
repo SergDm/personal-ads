@@ -17,6 +17,7 @@ const varMiddleware = require('./middleware/variables')
 const userMiddleware = require('./middleware/user')
 const errorHandler = require('./middleware/error')
 const fileMiddleware = require('./middleware/file')
+const allowCrossDomain = require('./middleware/allowCrossDomain')
 const keys = require('./keys')
 
 const app = express()
@@ -25,7 +26,6 @@ const store = new MongoStore({
   collection: 'session',
   uri: keys.MONGODB_URI
 })
-
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/images',express.static(path.join(__dirname, 'images')))
@@ -44,6 +44,7 @@ app.use(csrf())
 app.use(compression())
 app.use(varMiddleware)
 app.use(userMiddleware)
+app.use(allowCrossDomain)
 
 app.use('/admin', adminRoutes)
 app.use('/products', productsRoutes)

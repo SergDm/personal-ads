@@ -15,7 +15,7 @@ router.get('/', async(req, res) => {
     const products = await Product.find()
     .populate('userId', 'email name')
     .select('price title img group description')
-    return res.status(200).json({ message: products })
+    return res.status(200).json({ products: products })
   } catch (e) {
     res.status(500).json({ message: 'Something went wrong. Try later' })
     console.log(e)

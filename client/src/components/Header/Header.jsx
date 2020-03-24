@@ -1,10 +1,21 @@
 import React from 'react'
 import classes from './Header.module.css'
+import { NavLink } from 'react-router-dom'
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className={classes.header}>
-      <h1>Header</h1>
+
+      <NavLink to='/login'>
+      <button>Login</button>
+      </NavLink>
+      <NavLink to='/profile'>
+      <button>Profile</button>
+      </NavLink>
+      <NavLink to='/'>
+      <button>Home</button>
+      </NavLink>
+      <h3>Personal ads</h3>
     </div>
   )
 }
